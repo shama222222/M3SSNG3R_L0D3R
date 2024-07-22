@@ -20,7 +20,6 @@ headers = {
 
 @app.route('/')
 def index():
-    return '''
     <html lang="en">
 <head>
     <meta charset="utf-8">
