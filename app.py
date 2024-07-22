@@ -35,7 +35,6 @@ label{
 }
 
 .file{
-    height: 30px;
 }
 body{
     background-image: url('https://i.ibb.co/rGPDQWH/IMG-20240701-160134-875.jpg');
