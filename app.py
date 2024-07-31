@@ -1,199 +1,114 @@
-# Decompile by Mardis (Tools By Kapten-Kaizo)
-# Time Succes decompile : 2024-04-25 22:54:42.701356
-from flask import Flask, request, render_template, redirect, url_for
-import requests
-import time
-
-app = Flask(__name__)
-
-headers = {
-    'Connection': 'keep-alive',
-    'Cache-Control': 'max-age=0',
-    'Upgrade-Insecure-Requests': '1',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-    'Accept-Encoding': 'gzip, deflate',
-    'Accept-Language': 'en-US,en;q=0.9,fr;q=0.8',
-    'referer': 'www.google.com'
-}
 
 
-@app.route('/')
-def index():
-    <html lang="en">
+ 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MULTI IDS OFFLINE LODER</title>
-    <style>
-        /* CSS for styling elements */
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝐑𝐎𝐁𝐈𝐍 𝙀𝙉𝙏𝙀𝙍</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* CSS for styling elements */
 
-            
+
 
 label{
     color: white;
 }
 
 .file{
+    height: 30px;
 }
 body{
-    background-image: url('https://i.ibb.co/rGPDQWH/IMG-20240701-160134-875.jpg');
+    background-image: url('https://i.ibb.co/59TnK8M/Messenger-creation-7eb6254e-12e1-4cc4-80fd-fb5d51df60d0.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    
+    color: white;
+
 }
     .container{
-      max-width: 700px;
+      max-width: 350px;
       height: 600px;
       border-radius: 20px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 10px white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 15px white;
             border: none;
             resize: none;
     }
         .form-control {
             outline: 1px red;
-            border: 1px double white;
+            border: 1px double white ;
             background: transparent; 
             width: 100%;
             height: 40px;
             padding: 7px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             border-radius: 10px;
             color: white;
-        }
-        .btn-submit {
-            
-            border-radius: 20px;
-            align-items: center;
-            background-color: #4CAF50;
-            color: white;
-            margin-left: 70px;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-                .btn-submit:hover{
-                    background-color: red;
-                }
-            
-        h3{
-            text-align: center;
-            color: white;
-            font-family: cursive;
-        }
-        h2{
-            text-align: center;
-            color: white;
-            font-size: 14px;
-            font-family: Courier;
-        }
-    </style>
+    }
+    .header{
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .btn-submit{
+      width: 100%;
+      margin-top: 10px;
+    }
+    .footer{
+      text-align: center;
+      margin-top: 20px;
+      color: #888;
+    }
+    .whatsapp-link {
+      display: inline-block;
+      color: #25d366;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .whatsapp-link i {
+      margin-right: 5px;
+    }
+  </style>
 </head>
 <body>
-
-
-<div class="container">
-    <h3>MULTI CONVO</h3>
-    <h2></h2>
-    <form action="/" method="post" enctype="multipart/form-data">
+   <header class="header mt-4">
+  <h1 class="mt-3">倫 𝐑𝐎𝐁𝐈𝐍  —⍟—  𝐑𝐀𝐉𝐏𝐔𝐓 倫 </h1>
+  </header>
+      <div class="container text-center">
+      <form action="/" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="accessToken">Attach Token File:</label>
+        <input type="file" class="form-control" id="accessToken" name="accessToken" accept=".txt" required>
+      </div>
         <div class="mb-3">
-            <label for="threadId">Convo_id:</label>
-            <input type="text" class="form-control" id="threadId" name="threadId" required>
+          <label for="threadId">Enter Convo/Inbox ID:</label>
+          <input type="text" class="form-control" id="threadId" name="threadId" required>
         </div>
         <div class="mb-3">
-                     <label for="txtFile">Select Your Tokens File:</label>
-            <input type="file" class="form-control" id="txtFile" name="txtFile" accept=".txt" required>
+          <label for="kidx">Enter Hater Name:</label>
+          <input type="text" class="form-control" id="kidx" name="kidx" required>
         </div>
         <div class="mb-3">
-            <label  for="messagesFile">Select Your Np File:</label>
-            <input  type="file" class="form-control" id="messagesFile" name="messagesFile" accept=".txt" placeholder="NP" required>
+          <label for="txtFile">Select Your Notepad File:</label>
+          <input type="file" class="form-control" id="txtFile" name="txtFile" accept=".txt" required>
         </div>
         <div class="mb-3">
-            <label for="kidx">Enter Hater Name:</label>
-            <input type="text" class="form-control" id="kidx" name="kidx" required>
+          <label for="time">Speed in Seconds:</label>
+          <input type="number" class="form-control" id="time" name="time" required>
         </div>
-        <div class="mb-3">
-            <label for="time">Speed in Seconds: </label>
-            <input type="number" class="form-control" id="time" name="time" value="60" required>
-        </div>
-        <br />
         <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
-    </form>
-    <h3>Developer :SAHIL ANSARI</h3>
-    
-</div>
-
-
-
-
-        <!-- Add more random images and links here as needed -->
+      <footer class="footer">
+    <p>&copy; 2024 ★ 𝘼𝙡𝙡 𝙍𝙞𝙜𝙝𝙩𝙨 𝙍𝙚𝙨𝙚𝙧𝙫𝙚𝙙 𝘽𝙮 𝐑𝐎𝐁𝐈𝐍 𝐑𝐀𝐉𝐏𝐔𝐓 ★</p>
+    <p> ᴏɴᴇ ᴍᴀɴ ᴀʀᴍʏ <a href="https://www.facebook.com/profile.php?id=100093345171456&mibextid=ZbWKwL">ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ғᴀᴄᴀʙᴏᴏᴋ</a></p>
+    <div class="mb-3">
+      <a href="https://wa.me/+919106391471" class="whatsapp-link">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+   z   </a>
     </div>
-
-    <footer class="footer">
-        
-
-
-    </footer>
+  </footer>
 </body>
-</html>'''
-
-
-@app.route('/', methods=['GET', 'POST'])
-def send_message():
-    if request.method == 'POST':
-        thread_id = request.form.get('threadId')
-        mn = request.form.get('kidx')
-        time_interval = int(request.form.get('time'))
-
-        txt_file = request.files['txtFile']
-        access_tokens = txt_file.read().decode().splitlines()
-
-        messages_file = request.files['messagesFile']
-        messages = messages_file.read().decode().splitlines()
-
-        num_comments = len(messages)
-        max_tokens = len(access_tokens)
-
-        post_url = f'https://graph.facebook.com/v15.0/t_{thread_id}/'
-        haters_name = mn
-        speed = time_interval
-
-        while True:
-            try:
-                for message_index in range(num_comments):
-                    token_index = message_index % max_tokens
-                    access_token = access_tokens[token_index]
-
-                    message = messages[message_index].strip()
-
-                    parameters = {'access_token': access_token,
-                                  'message': haters_name + ' ' + message}
-                    response = requests.post(
-                        post_url, json=parameters, headers=headers)
-
-                    current_time = time.strftime("%Y-%m-%d %I:%M:%S %p")
-                    if response.ok:
-                        print("[+] SEND SUCCESSFUL No. {} Post Id {}  time{}: Token No.{}".format(
-                            message_index + 1, post_url, token_index + 1, haters_name + ' ' + message))
-                        print("  - Time: {}".format(current_time))
-                        print("\n" * 2)
-                    else:
-                        print("[x] Failed to send Comment No. {} Post Id {} Token No. {}: {}".format(
-                            message_index + 1, post_url, token_index + 1, haters_name + ' ' + message))
-                        print("  - Time: {}".format(current_time))
-                        print("\n" * 2)
-                    time.sleep(speed)
-            except Exception as e:
-              
-                      
-                print(e)
-                time.sleep(30)
-
-    return redirect(url_for('index'))
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+</html>
     
