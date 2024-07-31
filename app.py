@@ -1,8 +1,8 @@
+from flask import Flask, request, render_template, redirect, url_for
+import requests
+import time
 
-
- 
-<!DOCTYPE html>
-<html lang="en">
+app = Flask(__name__)
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
